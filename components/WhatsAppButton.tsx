@@ -16,7 +16,7 @@ export default function WhatsAppButton({
   message = "I wish to inquire about the Foundation.",
   label = "WhatsApp Transmission",
 }: WhatsAppButtonProps) {
-  const [hovered, setHovered] = useState(false);
+  // const [hovered, setHovered] = useState(false);
 
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
