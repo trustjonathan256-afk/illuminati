@@ -352,9 +352,9 @@ function PageLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Divider() {
-  return <div className="w-px h-20 bg-accent/30 mx-auto my-0" />;
-}
+// function Divider() {
+//   return <div className="w-px h-20 bg-accent/30 mx-auto my-0" />;
+// }
 
 /* ════════════════════════════════════════════════════════════
    PAGE
