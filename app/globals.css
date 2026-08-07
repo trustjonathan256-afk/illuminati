@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e8e8e3;
+  --accent: #8a1f1f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-mono), "Courier New", monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display), Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ─── EyeGlyph animations ─────────────────────────────────── */
+
+@keyframes eye-blink {
+  0%,
+  80%,
+  100% {
+    transform: scaleY(1);
+  }
+  88% {
+    transform: scaleY(0.06);
+  }
+}
+
+@keyframes eye-pupil-drift {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  65% {
+    transform: translateX(-4px);
+  }
+}
+
+@keyframes scrollCue {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleY(0.4);
+    transform-origin: bottom;
+  }
+}
+
+.eye-lid-group {
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.eye-lid-group.eye-blink {
+  animation: eye-blink 5s ease-in-out infinite;
+}
+
+.eye-pupil-drift {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: eye-pupil-drift 7s ease-in-out infinite;
+}
