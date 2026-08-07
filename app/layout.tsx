@@ -4,6 +4,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 // Gothic/serif display font for headings
 const displayFont = Cormorant_Garamond({
@@ -46,6 +47,7 @@ export default function RootLayout({
         <div className="pt-14 pb-8">{children}</div>
         <WhatsAppButton />
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
