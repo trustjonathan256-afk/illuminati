@@ -26,8 +26,8 @@ export default function WhatsAppButton({
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      // onMouseEnter={() => setHovered(true)}
+      // onMouseLeave={() => setHovered(false)}
       className="fixed bottom-12 right-6 z-50 flex items-center gap-2.5 px-4 py-2.5 bg-background/90 border border-emerald-500/40 hover:border-emerald-400 text-emerald-400 backdrop-blur-md shadow-[0_4px_20px_rgba(16,185,129,0.15)] transition-all duration-300 rounded-none group"
       aria-label="Contact via WhatsApp"
     >
